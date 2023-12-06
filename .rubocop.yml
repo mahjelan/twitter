@@ -3,69 +3,52 @@ require:
   - rubicon-rspec
   - rubicon-performance
   - rubicon-rails
-
 AllCops:
-  TargetRubyVersion: 3.0
+  TargetRubyVersion: 3
   NewCops: enable
-
 Layout/AccessModifierIndentation:
   EnforcedStyle: outset
-
 Layout/LineLength:
   AllowURI: true
   Enabled: true
-
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
-
 Lint/Void:
   Enabled: true
-
 Metrics/BlockLength:
   Max: 20
   Exclude:
     - spec/**/*.rb
-
 Metrics/BlockNesting:
   Max: 4
-
 Metrics/MethodLength:
   CountComments: false
   Max: 10
-
 Metrics/ModuleLength:
-  Max: 128 # TODO: Lower to 100
-
+  Max: 128
 Metrics/ParameterLists:
   Max: 3
   CountKeywordArgs: true
-
 Style/CollectionMethods:
   Enabled: true
   PreferredMethods:
-    map: "collect"
-    map!: "collect!"
-    reduce: "inject"
-    find: "detect"
-    find_all: "select"
-
+    map: collect
+    map!: collect!
+    reduce: inject
+    find: detect
+    find_all: select
 Style/Documentation:
   Enabled: true
-
 Style/DoubleNegation:
   Enabled: false
-
 Style/FrozenStringLiteralComment:
   Enabled: true
-
 Style/NumericPredicate:
   Enabled: true
-
 Style/StringLiterals:
   EnforcedStyle: double_quotes
-
 Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: "comma"
-
+  EnforcedStyleForMultiline: comma
 Style/TrailingCommaInHashLiteral:
-  EnforcedStyleForMultiline: "comma"
+  EnforcedStyleForMultiline: comma
+Transform: AWS::Serverless-2016-10-31
