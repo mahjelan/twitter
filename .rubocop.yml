@@ -7,7 +7,7 @@ AllCops:
   NewCops: enable
 
 Layout/AccessModifierIndentation:
-  EnforcedStyle: outdent
+  EnforcedStyle: outset
 
 Layout/LineLength:
   AllowURI: true
