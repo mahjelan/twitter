@@ -19,15 +19,15 @@ Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
 Lint/Void:
-  Enabled: false
+  Enabled: true
 
 Metrics/BlockLength:
-  Max: 48
+  Max: 20
   Exclude:
     - spec/**/*.rb
 
 Metrics/BlockNesting:
-  Max: 3
+  Max: 4
 
 Metrics/MethodLength:
   CountComments: false
@@ -37,26 +37,26 @@ Metrics/ModuleLength:
   Max: 128 # TODO: Lower to 100
 
 Metrics/ParameterLists:
-  Max: 5
+  Max: 3
   CountKeywordArgs: true
 
 Style/CollectionMethods:
   Enabled: true
   PreferredMethods:
-    map:      'collect'
-    map!:     'collect!'
-    reduce:   'inject'
-    find:     'detect'
-    find_all: 'select'
+    map: "collect"
+    map!: "collect!"
+    reduce: "inject"
+    find: "detect"
+    find_all: "select"
 
 Style/Documentation:
   Enabled: true
 
 Style/DoubleNegation:
-  Enabled: true
+  Enabled: false
 
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  Enabled: true
 
 Style/NumericPredicate:
   Enabled: true
@@ -65,7 +65,7 @@ Style/StringLiterals:
   EnforcedStyle: double_quotes
 
 Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: 'comma'
+  EnforcedStyleForMultiline: "comma"
 
 Style/TrailingCommaInHashLiteral:
-  EnforcedStyleForMultiline: 'comma'
+  EnforcedStyleForMultiline: "comma"
