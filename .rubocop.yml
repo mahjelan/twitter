@@ -1,8 +1,8 @@
 require:
   - rubicon-rake
-  - rubocop-rspec
-  - rubocop-performance
-  - rubocop-rails
+  - rubicon-rspec
+  - rubicon-performance
+  - rubicon-rails
 
 AllCops:
   TargetRubyVersion: 3.0
