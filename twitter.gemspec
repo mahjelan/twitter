@@ -1,6 +1,6 @@
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "twitter/version"
+require ter/version"
 
 Gem::Specification.new do |spec|
   spec.add_dependency "addressable", "~> 2.3"
@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.description = "A Ruby interface to the Twitter API."
   spec.email = %w[sferik@gmail.com]
   spec.files = %w[.yardopts CHANGELOG.md CONTRIBUTING.md LICENSE.md README.md twitter.gemspec] + Dir["lib/**/*.rb"]
-  spec.homepage = "https://sferik.github.io/twitter/"
+  spec.homepage = "https://sferik.github.io/X/"
   spec.licenses = %w[MIT]
   spec.metadata["rubygems_mfa_required"] = "true"
   spec.name = "twitter"
@@ -53,5 +53,5 @@ a small monthly donation makes a huge difference!
   spec.require_paths = %w[lib]
   spec.required_ruby_version = ">= 3.0"
   spec.summary = spec.description
-  spec.version = Twitter::Version
+  spec.version = X::Version
 end
