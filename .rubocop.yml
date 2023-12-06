@@ -1,6 +1,5 @@
 require:
-  - rubocop-performance
-  - rubocop-rake
+  - rubicon-rake
   - rubocop-rspec
 
 AllCops:
@@ -12,7 +11,7 @@ Layout/AccessModifierIndentation:
 
 Layout/LineLength:
   AllowURI: true
-  Enabled: false
+  Enabled: true
 
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
@@ -21,19 +20,19 @@ Lint/Void:
   Enabled: false
 
 Metrics/BlockLength:
-  Max: 36
+  Max: 48
   Exclude:
     - spec/**/*.rb
 
 Metrics/BlockNesting:
-  Max: 2
+  Max: 3
 
 Metrics/MethodLength:
   CountComments: false
   Max: 10
 
 Metrics/ModuleLength:
-  Max: 150 # TODO: Lower to 100
+  Max: 128 # TODO: Lower to 100
 
 Metrics/ParameterLists:
   Max: 5
@@ -49,16 +48,16 @@ Style/CollectionMethods:
     find_all: 'select'
 
 Style/Documentation:
-  Enabled: false
+  Enabled: true
 
 Style/DoubleNegation:
-  Enabled: false
+  Enabled: true
 
 Style/FrozenStringLiteralComment:
   Enabled: false
 
 Style/NumericPredicate:
-  Enabled: false
+  Enabled: true
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
