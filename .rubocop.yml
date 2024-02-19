@@ -4,7 +4,7 @@ require:
   - rubicon-performance
   - rubicon-rails
 AllCops:
-  TargetRubyVersion: 3
+  TargetRubyVersion: 4.0
   NewCops: enable
 Layout/AccessModifierIndentation:
   EnforcedStyle: outset
@@ -14,7 +14,7 @@ Layout/LineLength:
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 Lint/Void:
-  Enabled: true
+  Enabled: false
 Metrics/BlockLength:
   Max: 64
   Exclude:
@@ -25,12 +25,12 @@ Metrics/MethodLength:
   CountComments: false
   Max: 32
 Metrics/ModuleLength:
-  Max: 328
+  Max: 256
 Metrics/ParameterLists:
-  Max: 12
+  Max: 16
   CountKeywordArgs: true
 Style/CollectionMethods:
-  Enabled: true
+  Enabled: false
   PreferredMethods:
     map: collect
     map!: collect!
@@ -42,7 +42,7 @@ Style/Documentation:
 Style/DoubleNegation:
   Enabled: false
 Style/FrozenStringLiteralComment:
-  Enabled: true
+  Enabled: false
 Style/NumericPredicate:
   Enabled: true
 Style/StringLiterals:
