@@ -16,18 +16,18 @@ Layout/SpaceInsideHashLiteralBraces:
 Lint/Void:
   Enabled: false
 Metrics/BlockLength:
-  Max: 64
+  Max: 32
   Exclude:
     - spec/**/*.rb
 Metrics/BlockNesting:
-  Max: 16
+  Max: 8
 Metrics/MethodLength:
   CountComments: false
-  Max: 32
+  Max: 64
 Metrics/ModuleLength:
   Max: 256
 Metrics/ParameterLists:
-  Max: 16
+  Max: 32
   CountKeywordArgs: true
 Style/CollectionMethods:
   Enabled: false
