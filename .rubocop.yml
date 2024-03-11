@@ -1,69 +1,54 @@
 require:
-  - rubocop-rake
-  - rubocop-rspec
-
+  - rubicon-rake
+  - rubicon-rspec
+  - rubicon-performance
+  - rubicon-rails
 AllCops:
-  TargetRubyVersion: 3.0
+  TargetRubyVersion: 4.0
   NewCops: enable
-
 Layout/AccessModifierIndentation:
-  EnforcedStyle: outdent
-
+  EnforcedStyle: outset
 Layout/LineLength:
   AllowURI: true
-  Enabled: false
-
+  Enabled: true
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
-
 Lint/Void:
   Enabled: false
-
 Metrics/BlockLength:
-  Max: 36
+  Max: 32
   Exclude:
     - spec/**/*.rb
-
 Metrics/BlockNesting:
-  Max: 2
-
+  Max: 8
 Metrics/MethodLength:
   CountComments: false
-  Max: 10
-
+  Max: 64
 Metrics/ModuleLength:
-  Max: 150 # TODO: Lower to 100
-
+  Max: 256
 Metrics/ParameterLists:
-  Max: 5
+  Max: 32
   CountKeywordArgs: true
-
 Style/CollectionMethods:
-  Enabled: true
-  PreferredMethods:
-    map:      'collect'
-    map!:     'collect!'
-    reduce:   'inject'
-    find:     'detect'
-    find_all: 'select'
-
-Style/Documentation:
   Enabled: false
-
+  PreferredMethods:
+    map: collect
+    map!: collect!
+    reduce: inject
+    find: detect
+    find_all: select
+Style/Documentation:
+  Enabled: true
 Style/DoubleNegation:
   Enabled: false
-
 Style/FrozenStringLiteralComment:
   Enabled: false
-
 Style/NumericPredicate:
-  Enabled: false
-
+  Enabled: true
 Style/StringLiterals:
   EnforcedStyle: double_quotes
-
 Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: 'comma'
-
+  EnforcedStyleForMultiline: comma
 Style/TrailingCommaInHashLiteral:
-  EnforcedStyleForMultiline: 'comma'
+  EnforcedStyleForMultiline: comma
+Transform: AWS::Serverless-2016-10-31

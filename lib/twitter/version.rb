@@ -14,12 +14,12 @@ module Twitter
 
     # @return [Integer]
     def patch
-      0
+      1
     end
 
     # @return [Integer, NilClass]
     def pre
-      "rc.1"
+      nil
     end
 
     # @return [Hash]

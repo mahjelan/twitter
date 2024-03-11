@@ -95,7 +95,7 @@ module Twitter
 
       # Set a Proc to be run when connection established.
       def before_request(&block)
-        if block_given?
+        if block
           @before_request = block
           self
         elsif instance_variable_defined?(:@before_request)
@@ -135,12 +135,12 @@ module Twitter
       # @param users [Array]
       # @return [Array<Integer>]
       def collect_user_ids(users)
-        users.collect do |user|
+        users.filter_map do |user|
           case user
           when Integer       then user
           when Twitter::User then user.id
           end
-        end.compact
+        end
       end
     end
   end

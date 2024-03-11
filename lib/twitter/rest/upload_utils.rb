@@ -10,8 +10,10 @@ module Twitter
       #
       # @see https://developer.twitter.com/en/docs/media/upload-media/uploading-media/media-best-practices
       def upload(media, media_category_prefix: "tweet")
-        return chunk_upload(media, "video/mp4", "#{media_category_prefix}_video") if File.extname(media) == ".mp4"
-        return chunk_upload(media, "image/gif", "#{media_category_prefix}_gif") if File.extname(media) == ".gif" && File.size(media) > 5_000_000
+        ext = File.extname(media)
+        return chunk_upload(media, "video/mp4", "#{media_category_prefix}_video") if ext == ".mp4"
+        return chunk_upload(media, "video/quicktime", "#{media_category_prefix}_video") if ext == ".mov"
+        return chunk_upload(media, "image/gif", "#{media_category_prefix}_gif") if ext == ".gif" && File.size(media) > 5_000_000
 
         Twitter::REST::Request.new(self, :multipart_post, "https://upload.twitter.com/1.1/media/upload.json", key: :media, file: media).perform
       end
@@ -54,8 +56,10 @@ module Twitter
       def finalize_media(media_id)
         response = Twitter::REST::Request.new(self, :post, "https://upload.twitter.com/1.1/media/upload.json",
                                               command: "FINALIZE", media_id: media_id).perform
+        failed_or_succeeded = %w[failed succeeded]
+
         loop do
-          return response if !response[:processing_info] || %w[failed succeeded].include?(response[:processing_info][:state])
+          return response if !response[:processing_info] || failed_or_succeeded.include?(response[:processing_info][:state])
 
           sleep(response[:processing_info][:check_after_secs])
           response = Twitter::REST::Request.new(self, :get, "https://upload.twitter.com/1.1/media/upload.json",
