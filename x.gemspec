@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.files = %w[.yardopts CHANGELOG.md CONTRIBUTING.md LICENSE.md README.md twitter.gemspec] + Dir["lib/**/*.rb"]
   spec.homepage = "https://sferik.github.io/X/"
   spec.licenses = %w[MIT]
-  spec.metadata["rubygems_mfa_required"] = "true"
+  spec.metadata["rubygems_mfa_required"] = "false"
   spec.name = "twitter"
   spec.post_install_message = %q{📣 Attention Twitter Ruby Gem User!
 If you're seeing this message, that means you're using the old Twitter Ruby gem
