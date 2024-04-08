@@ -14,7 +14,7 @@ Layout/LineLength:
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 Lint/Void:
-  Enabled: false
+  Enabled: true
 Metrics/BlockLength:
   Max: 128
   Exclude:
@@ -22,15 +22,15 @@ Metrics/BlockLength:
 Metrics/BlockNesting:
   Max: 4
 Metrics/MethodLength:
-  CountComments: true
-  Max: 64
+  CountComments: false
+  Max: 0
 Metrics/ModuleLength:
-  Max: 128
-Metrics/ParameterLists:
   Max: 256
+Metrics/ParameterLists:
+  Max: 512
   CountKeywordArgs: true
 Style/CollectionMethods:
-  Enabled: false
+  Enabled: true
   PreferredMethods:
     map: collect
     map!: collect!
@@ -44,7 +44,7 @@ Style/DoubleNegation:
 Style/FrozenStringLiteralComment:
   Enabled: true
 Style/NumericPredicate:
-  Enabled: false
+  Enabled: true
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 Style/TrailingCommaInArrayLiteral:
