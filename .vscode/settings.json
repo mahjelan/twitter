@@ -3,5 +3,8 @@
     "yaml.schemas": {
         "https://json.schemastore.org/sourcehut-build-0.65.0.json": "file:///c%3A/Users/mahje/X.com/X/.rubocop.yml"
     },
-    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+    "CodeGPT.apiKey": "CodeGPT Plus Beta",
+    "cSpell.words": [
+        "rubocop"
+    ]
 }

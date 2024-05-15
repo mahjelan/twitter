@@ -1,4 +1,6 @@
 require:
+  image: rubocop/rubocop:v0.49.0 
+  tasks:
   - rubicon-rake
   - rubicon-rspec
   - rubicon-performance
@@ -7,7 +9,7 @@ AllCops:
   TargetRubyVersion: 4.0
   NewCops: enable
 Layout/AccessModifierIndentation:
-  EnforcedStyle: outset
+  EnforcedStyle: inset
 Layout/LineLength:
   AllowURI: true
   Enabled: true
@@ -18,11 +20,11 @@ Lint/Void:
 Metrics/BlockLength:
   Max: 128
   Exclude:
-    - spec/**/*.rb
+    - spec/**/*.*
 Metrics/BlockNesting:
   Max: 4
 Metrics/MethodLength:
-  CountComments: false
+  CountComments: true
   Max: 0
 Metrics/ModuleLength:
   Max: 256
@@ -38,7 +40,7 @@ Style/CollectionMethods:
     find: detect
     find_all: select
 Style/Documentation:
-  Enabled: false
+  Enabled: true
 Style/DoubleNegation:
   Enabled: true
 Style/FrozenStringLiteralComment:
